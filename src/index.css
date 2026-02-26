@@ -1,0 +1,122 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    --background: 0 0% 100%;
+    --foreground: 186 100% 8%;
+
+    --card: 0 0% 100%;
+    --card-foreground: 186 100% 8%;
+
+    --popover: 0 0% 100%;
+    --popover-foreground: 186 100% 8%;
+
+    --primary: 183 100% 12%;
+    --primary-foreground: 0 0% 100%;
+
+    --secondary: 180 15% 95%;
+    --secondary-foreground: 183 100% 12%;
+
+    --muted: 180 10% 96%;
+    --muted-foreground: 186 10% 45%;
+
+    --accent: 170 80% 38%;
+    --accent-foreground: 0 0% 100%;
+
+    --destructive: 0 84.2% 60.2%;
+    --destructive-foreground: 0 0% 100%;
+
+    --border: 180 10% 90%;
+    --input: 180 10% 85%;
+    --ring: 183 100% 12%;
+
+    --radius: 0.5rem;
+
+    --nav-bg: 183 100% 12%;
+    --nav-foreground: 0 0% 100%;
+
+    --hero-teal: 177 65% 30%;
+    --hero-teal-foreground: 0 0% 100%;
+
+    --deal-badge: 35 95% 55%;
+    --deal-badge-foreground: 0 0% 100%;
+
+    --sidebar-background: 0 0% 98%;
+    --sidebar-foreground: 240 5.3% 26.1%;
+    --sidebar-primary: 240 5.9% 10%;
+    --sidebar-primary-foreground: 0 0% 98%;
+    --sidebar-accent: 240 4.8% 95.9%;
+    --sidebar-accent-foreground: 240 5.9% 10%;
+    --sidebar-border: 220 13% 91%;
+    --sidebar-ring: 217.2 91.2% 59.8%;
+  }
+
+  .dark {
+    --background: 186 100% 4%;
+    --foreground: 0 0% 95%;
+    --card: 186 60% 8%;
+    --card-foreground: 0 0% 95%;
+    --popover: 186 60% 8%;
+    --popover-foreground: 0 0% 95%;
+    --primary: 170 80% 38%;
+    --primary-foreground: 0 0% 100%;
+    --secondary: 186 30% 15%;
+    --secondary-foreground: 0 0% 95%;
+    --muted: 186 20% 15%;
+    --muted-foreground: 180 10% 60%;
+    --accent: 170 80% 38%;
+    --accent-foreground: 0 0% 100%;
+    --destructive: 0 62.8% 30.6%;
+    --destructive-foreground: 0 0% 95%;
+    --border: 186 20% 18%;
+    --input: 186 20% 18%;
+    --ring: 170 80% 38%;
+    --sidebar-background: 240 5.9% 10%;
+    --sidebar-foreground: 240 4.8% 95.9%;
+    --sidebar-primary: 224.3 76.3% 48%;
+    --sidebar-primary-foreground: 0 0% 100%;
+    --sidebar-accent: 240 3.7% 15.9%;
+    --sidebar-accent-foreground: 240 4.8% 95.9%;
+    --sidebar-border: 240 3.7% 15.9%;
+    --sidebar-ring: 217.2 91.2% 59.8%;
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+
+  body {
+    @apply bg-background text-foreground;
+    font-family: 'Segoe UI', system-ui, -apple-system, sans-serif;
+  }
+}
+
+@layer components {
+  .nav-link {
+    @apply text-nav-foreground/90 hover:text-nav-foreground font-medium text-sm tracking-wide transition-colors cursor-pointer;
+  }
+
+  .booking-field {
+    @apply border-b border-input pb-2 pt-4 w-full bg-transparent focus:outline-none focus:border-primary transition-colors text-foreground;
+  }
+
+  .booking-label {
+    @apply text-xs text-muted-foreground uppercase tracking-wider;
+  }
+
+  .promo-card {
+    @apply rounded-xl overflow-hidden shadow-lg hover:shadow-xl transition-shadow duration-300;
+  }
+
+  .dest-card {
+    @apply relative rounded-xl overflow-hidden cursor-pointer;
+  }
+
+  .dest-card-overlay {
+    @apply absolute inset-0 bg-gradient-to-t from-foreground/70 via-transparent to-transparent;
+  }
+}
