@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 # JetRoutes - Modern Flight Booking Platform
 
 A production-ready flight booking web application built with **React 18**, **TypeScript**, **Tailwind CSS**, and **Vite**. Features a complete booking flow with multiple payment options including crypto payments.
@@ -296,3 +297,6 @@ Built with:
 ---
 
 **Made with ❤️ by the JetRoutes team**
+=======
+# jetroutes
+>>>>>>> eb0d3d5bec1f6226bcc2a13b7b76af35df169f7f
